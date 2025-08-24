@@ -7,4 +7,4 @@ psycopg[binary]
 python-dotenv==1.1.0
 flask-migrate==4.1.0
 weasyprint[visual]==61.0
-markupface==3.0.2
+MarkupSafe==3.0.2
