@@ -3,10 +3,11 @@ from flask import Flask
 import os
 from flask_sqlalchemy import SQLAlchemy
 from app.config import config
-
+from flask_migrate import Migrate
 
 # Creás la instancia global de la base de datos (se va a vincular con app después).
 db = SQLAlchemy()
+migrate = Migrate()
 
 def create_app() -> Flask:
     """
@@ -23,6 +24,7 @@ def create_app() -> Flask:
     
     # Conecta la instancia de SQLAlchemy con tu app Flask.
     db.init_app(app)
+    migrate.init_app(app, db)
 
 
 

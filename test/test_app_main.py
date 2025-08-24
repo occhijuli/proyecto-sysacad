@@ -16,6 +16,3 @@ class AppTestCase(unittest.TestCase):
 
     def test_app(self):
         self.assertIsNotNone(current_app)
-
-if __name__ == '__main__':
-    unittest.main()

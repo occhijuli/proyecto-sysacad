@@ -21,6 +21,3 @@ class CategoriaCargoTestCase(unittest.TestCase):
         categoriacargo.nombre = "Categoria 1"
         self.assertIsNotNone(categoriacargo)
         self.assertEqual(categoriacargo.nombre, "Categoria 1")
-
-if __name__ == "__main__":
-    unittest.main()

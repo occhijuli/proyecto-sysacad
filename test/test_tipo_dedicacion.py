@@ -20,6 +20,3 @@ class AppTestCase(unittest.TestCase):
         tipo_dedicacion.nombre = "Dedicacion simple"
         self.assertIsNotNone(tipo_dedicacion)
         self.assertEqual(tipo_dedicacion.nombre, "Dedicacion simple")
-
-if __name__ == "__main__":
-    unittest.main()

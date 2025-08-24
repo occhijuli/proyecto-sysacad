@@ -43,7 +43,3 @@ class AutoridadTestCase(unittest.TestCase):
         autoridad.cargo = cargo
         autoridad.telefono = "123456789"
         autoridad.email = "abc@gmail.com"
-
-
-if __name__ == "__main__":
-    unittest.main()
