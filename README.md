@@ -1,12 +1,21 @@
-
 # PROYECTO-SYSACAD
 
-**Integrantes:** Juan Destéfano, Occhipinti Julián y Santiago Bruno
+**Integrantes:** Juan Destéfano, Occhipinti Julián y Santiago Bruno.
 
-Este proyecto contó con ayuda de GitHub Copilot Pro, ChatGPT 5 y DeepSeek.
+Este proyecto fue realizado con la ayuda de GitHub Copilot, ChatGPT y DeepSeek.
 
 [Información Útil](https://cake-sushi-9a6.notion.site/Info-til-1c29afa16efd8055b44ddbd7f53260b8?pvs=4)
 
+## 📋 Descripción del Proyecto
+Sistema de gestión académica desarrollado en Python para la administración de facultades, materias, alumnos y certificados.
+
+## ⚙️ Requerimientos Técnicos
+- Python 3.8 o superior
+- Dependencias: `pip install -r requirements.txt`
+- Base de datos SQLite (incluida)
+- Docker (opcional para despliegue)
+
+## 🚀 Cómo Ejecutar el Proyecto
 
 ## Instalación
 
@@ -48,7 +57,7 @@ Este proyecto contó con ayuda de GitHub Copilot Pro, ChatGPT 5 y DeepSeek.
 5. Ejecutá los tests para verificar que todo funciona correctamente:
    **Windows (PowerShell):**
    ```powershell
-   "env_name\Scripts\python.exe" -m unittest discover -s test
+   & "env_name\Scripts\python.exe" -m unittest discover -s test
    ```
    O si el entorno ya está activado:
    ```powershell
@@ -65,7 +74,7 @@ Este proyecto contó con ayuda de GitHub Copilot Pro, ChatGPT 5 y DeepSeek.
 
 **Windows (PowerShell):**
 ```powershell
-"env_name\Scripts\python.exe" -m unittest test.test_facultad
+& "env_name\Scripts\python.exe" -m unittest test.test_facultad
 ```
 O si el entorno ya está activado:
 ```powershell
