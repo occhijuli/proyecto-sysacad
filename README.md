@@ -3,7 +3,7 @@
 
 **Integrantes:** Juan Destéfano, Occhipinti Julián y Santiago Bruno
 
-Este proyecto fue realizado con la ayuda de GitHub Copilot, ChatGPT y DeepSeek.
+Este proyecto contó con ayuda de GitHub Copilot Pro, ChatGPT 5 y DeepSeek.
 
 [Información Útil](https://cake-sushi-9a6.notion.site/Info-til-1c29afa16efd8055b44ddbd7f53260b8?pvs=4)
 
@@ -48,7 +48,7 @@ Este proyecto fue realizado con la ayuda de GitHub Copilot, ChatGPT y DeepSeek.
 5. Ejecutá los tests para verificar que todo funciona correctamente:
    **Windows (PowerShell):**
    ```powershell
-   & "env_name\Scripts\python.exe" -m unittest discover -s test
+   "env_name\Scripts\python.exe" -m unittest discover -s test
    ```
    O si el entorno ya está activado:
    ```powershell
@@ -65,7 +65,7 @@ Este proyecto fue realizado con la ayuda de GitHub Copilot, ChatGPT y DeepSeek.
 
 **Windows (PowerShell):**
 ```powershell
-& "env_name\Scripts\python.exe" -m unittest test.test_facultad
+"env_name\Scripts\python.exe" -m unittest test.test_facultad
 ```
 O si el entorno ya está activado:
 ```powershell
