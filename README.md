@@ -1,4 +1,9 @@
-# proyecto-sysacad
+
+# PROYECTO-SYSACAD
+
+**Integrantes:** Juan Destéfano, Occhipinti Julián y Santiago Bruno
+
+Este proyecto fue realizado con la ayuda de GitHub Copilot, ChatGPT y DeepSeek.
 
 [Información Útil](https://cake-sushi-9a6.notion.site/Info-til-1c29afa16efd8055b44ddbd7f53260b8?pvs=4)
 
@@ -34,7 +39,41 @@
    which python
    ```
 
+
 4. Instalá las dependencias en el entorno virtual seleccionado:
    ```bash
    pip install -r requirements.txt
    ```
+
+5. Ejecutá los tests para verificar que todo funciona correctamente:
+   **Windows (PowerShell):**
+   ```powershell
+   & "env_name\Scripts\python.exe" -m unittest discover -s test
+   ```
+   O si el entorno ya está activado:
+   ```powershell
+   python -m unittest discover -s test
+   ```
+
+   **Linux / Mac / Git Bash:**
+   ```bash
+   source env_name/bin/activate
+   python -m unittest discover -s test
+   ```
+
+## Ejecutar un test específico
+
+**Windows (PowerShell):**
+```powershell
+& "env_name\Scripts\python.exe" -m unittest test.test_facultad
+```
+O si el entorno ya está activado:
+```powershell
+python -m unittest test.test_facultad
+```
+
+**Linux / Mac / Git Bash:**
+```bash
+source env_name/bin/activate
+python -m unittest test.test_facultad
+```
