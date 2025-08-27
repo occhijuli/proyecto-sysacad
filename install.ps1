@@ -1,12 +1,38 @@
-# Se necesitan tener los permisos de seguridad configurados con Set-ExecutionPolicy RemoteSigned
-# Para ello, abrir la consola de PowerShell como administrador y ejecutar:
-# Set-ExecutionPolicy RemoteSigned
+<#
+Instalación de dependencias con entorno virtual local (.venv)
 
-# Activar el entorno virtual
-# Cambiar la ruta del entorno virtual si es necesario
-& "$env:USERPROFILE\environments\gral_env\Scripts\Activate.ps1"
+Este script:
+	1) Crea un entorno virtual local en .venv si no existe.
+	2) Activa ese entorno virtual.
+	3) Actualiza pip/setuptools/wheel (opcional) y luego instala requirements.txt.
 
-Write-Host "✅ Entorno virtual 'gral_env' activado correctamente." -ForegroundColor Green
+Nota: No usa rutas absolutas del autor. Todo es relativo al directorio del repo.
+#>
 
-# Instalar dependencias
+$ErrorActionPreference = 'Stop'
+
+# Ir al directorio donde está este script (raíz del repo)
+Set-Location -Path $PSScriptRoot
+
+$venvPath = Join-Path $PSScriptRoot '.venv'
+$activatePs1 = Join-Path $venvPath 'Scripts/Activate.ps1'
+
+if (-not (Test-Path $venvPath)) {
+		Write-Host "Creando entorno virtual en: $venvPath" -ForegroundColor Cyan
+		python -m venv $venvPath
+}
+
+if (-not (Test-Path $activatePs1)) {
+		throw "No se encontró el script de activación: $activatePs1. Revisa que Python esté instalado y que la creación del venv haya sido exitosa."
+}
+
+Write-Host "Activando entorno virtual local (.venv)..." -ForegroundColor Cyan
+& $activatePs1
+
+Write-Host "Actualizando instaladores base..." -ForegroundColor DarkCyan
+python -m pip install --upgrade pip setuptools wheel
+
+Write-Host "Instalando dependencias desde requirements.txt..." -ForegroundColor Cyan
 pip install -r requirements.txt
+
+Write-Host "✅ Dependencias instaladas en el entorno .venv" -ForegroundColor Green

@@ -1,9 +1,11 @@
 # Entornos virtuales (locales)
+.venv/
 venv/
-.env/
 env/
+env_name/
 .gral_env/
 environments/
+.env
 *.env
 
 # Entorno virtual global
